@@ -11,9 +11,17 @@ He elegido el apartado D del [enunciado](./Practica5.pdf)
 A continuación se describen los comandos esenciales para configurar, desplegar, visualizar y limpiar el entorno de clúster. 
 Todos estos comandos se deben realizar desde la carpeta raiz del proyecto.
 
+### Iniciar docker swarm
+
+```
+docker swarm init
+```
+
+Este comando inicia el software de orquestación de Docker. 
+
 ### Construcción del entorno
 
-```bash
+```
 docker compose build
 ```
 
@@ -21,7 +29,7 @@ Este comando construye los contenedores definidos en el archivo `docker-compose.
 
 ### Despliegue del clúster
 
-```bash
+```
 docker stack deploy -c docker-compose.yaml mystack
 ```
 
