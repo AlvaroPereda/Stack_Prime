@@ -4,7 +4,7 @@
 
 **Calificación:** /10
 
-He elegido el apartado D del [enunciado](.Practica5.pdf)
+He elegido el apartado D del [enunciado](./Practica5.pdf)
 
 ## Comandos utilizados
 
