@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  coordinator:
+    build: ./coordinator
+    image: coordinator:latest
+    ports:
+      - "8000:5000"
+    networks:
+      - red_app
+    environment:
+      - WORKER_REPLICAS=${WORKER_REPLICAS:-3}
+    deploy:
+      replicas: 1
+
+  worker:
+    build: ./worker
+    image: worker:latest
+    networks:
+      - red_app
+    deploy:
+      replicas: ${WORKER_REPLICAS:-3}
+
+networks:
+  red_app:
+    driver: overlay
