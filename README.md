@@ -8,13 +8,7 @@ He elegido el apartado D del [enunciado](./Practica5.pdf).
 
 ## Arquitectura del Programa
 
-El programa está diseñado con una arquitectura distribuida compuesta por dos componentes principales: un **coordinador (coordinator)** y múltiples **trabajadores (workers)**.
-
-- El **coordinador** recibe un número proporcionado por el usuario y lo divide en partes iguales, asignando un rango específico a cada worker.
-- Cada **worker** recibe su rango mediante una petición **POST** enviada por el coordinador, y se encarga de calcular los números primos dentro de ese rango.
-- Esta división de tareas permite **paralelizar el trabajo**, optimizando así el tiempo de procesamiento.
-- Una vez que los workers terminan sus cálculos, envían los resultados nuevamente al coordinador mediante otra petición **POST**.
-- Finalmente, el **coordinador** recoge todas las respuestas y presenta los resultados al usuario.
+Todo está explicado en la [memoria del proyecto](./Memoria.pdf).
 
 El programa se ejecuta en la dirección [http://localhost:8000](http://localhost:8000/)
 
@@ -58,6 +52,8 @@ docker service logs -f mystack_worker
 ```
 
 Permite observar cómo se están ejecutando los distintos contenedores `worker`, con los parámetros asignados a cada uno para su cálculo.
+
+![Logs del funcionamiento de Stack Prime](./logs_stack_prime.png)
 
 ### Eliminación del stack
 
