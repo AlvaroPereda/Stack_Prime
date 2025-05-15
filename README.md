@@ -78,3 +78,17 @@ docker rmi worker; docker rmi coordinator
 Esto asegura que las imágenes de los servicios `worker` y `coordinator` sean eliminadas completamente.
 
 ---
+
+## Diagrama de flujo
+
+```mermaid
+flowchart TD
+    A[Usuario accede a página web] --> B[Contenedor Coordinador recibe petición]
+    B --> C[Usuario introduce un número] 
+    C --> D[Coordinador divide entre N contenedores trabajadores y envia el rango que debe calcular cada uno]
+    D --> E[Trabajadores calculan los números primos de su rango]
+    E --> F[Trabajadores devuelven resultados al coordinador]
+    F --> G[Coordinador agrupa resultados]
+    G --> H[Coordinador muestra resultados en la web]
+    H --> C
+
