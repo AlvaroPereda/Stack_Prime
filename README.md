@@ -73,6 +73,14 @@ docker rmi worker; docker rmi coordinator
 
 Esto asegura que las imágenes de los servicios `worker` y `coordinator` sean eliminadas completamente.
 
+### Salir de Docker Swarm
+
+Si se desea salir de Docker Swarm se utiliza el siguiente comando:
+
+```
+docker swarm leave --force
+```
+
 ---
 
 ## Diagrama de flujo
