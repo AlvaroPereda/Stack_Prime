@@ -10,8 +10,6 @@ He elegido el apartado D del [enunciado](./Practica5.pdf).
 
 Todo está explicado en la [memoria del proyecto](./Memoria.pdf).
 
-El programa se ejecuta en la dirección [http://localhost:8000](http://localhost:8000/)
-
 ---
 
 ## Comandos utilizados
@@ -42,6 +40,8 @@ docker stack deploy -c docker-compose.yaml mystack
 ```
 
 Este comando despliega el stack definido con Docker Compose bajo el nombre `mystack`.
+
+El programa se ejecuta en la dirección [http://localhost:8000](http://localhost:8000/)
 
 Si se quiere modificar la cantidad de réplicas worker se debe cambiar el valor definido en el archivo [.env](./.env)
 
