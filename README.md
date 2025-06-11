@@ -2,7 +2,7 @@
 
 **Alumno:** Álvaro Pereda Sánchez
 
-**Calificación:** /10
+**Calificación:** 10/10
 
 He elegido el apartado D del [enunciado](./Practica5.pdf). 
 
